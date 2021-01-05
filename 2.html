@@ -3,20 +3,25 @@
 <head>
     <title>WEB1 - CSS</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
 </head>
-    
+<!--id>class>일반선택자 순서로 강력하게 적용이 됨.-->    
     
 <body>
     <h1><a href="index.html">WEB</a></h1>
-    <ol>
-        <li><a href="1.html"> HTML</a></li>
-        <li><a href="2.html"> CSS</a></li>
-        <li><a href="3.html"> JavaScript</a></li>
-    </ol>
-    <h1>CSS이란 무엇인가?</h1>
-    <p><a href="https://www.w3.org/TR/2011/WD-html5-20110405/"  target="_blank" title="html5 speicitication">CSS</a>
-        hello <strong><u>hello</u> CSS</strong></p>
-
-    <img src="coding.jpg" width="100%">
+    <div id="grid">
+        <ol >
+            <!--class: 그룹화하다-->
+            <li><a href="1.html"> HTML</a></li>
+            <li><a href="2.html" id="active"> CSS</a></li>
+            <li><a href="3.html"> JavaScript</a></li>
+        </ol>
+        <div id="article">
+            <h2>CSS이란 무엇인가?</h2>
+            <p>
+            Cascading Style Sheets (<a href="https://en.wikipedia.org/wiki/CSS">CSS</a>) 에서는 id, class, 일반태그 순서로 style이 적용이 된다. 더 구체적인 것이 제일 강력하게 적용된다는 의미이다.
+            h1은 제목태그이기 때문에 자동으로 줄바꿈이 적용된다.</p>
+        </div>
+    </div>
 </body>
 </html>
