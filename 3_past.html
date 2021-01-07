@@ -9,18 +9,27 @@
     
 <body>
     <h1><a href="index.html">WEB</a></h1>
-    <!--자기자신을 가리키기위해 document.querySelector('#night_day')처럼 night_day라는 id값을 사용하지 않고 this를 이용한다.-->
-    <input type="button" value="night" onclick=" 
-    var target = document.querySelector('body');                                            
-    if(this.value==='night'){ 
-       target.style.backgroundColor='black';
-       target.style.color='white';
-       this.value='day';
+    <!--
+    <input type="button" value="night" onclick="
+    document.querySelector('body').style.backgroundColor='black';
+    document.querySelector('body').style.color='white';                                            
+    ">
+    
+    <input type="button" value="day" onclick="
+    document.querySelector('body').style.backgroundColor='white';
+    document.querySelector('body').style.color='black';                                            
+    ">
+    -->
+    <input id="night_day" type="button" value="night" onclick=" 
+    if(document.querySelector('#night_day').value==='night'){                                             
+      document.querySelector('body').style.backgroundColor='black';
+       document.querySelector('body').style.color='white';
+       document.querySelector('#night_day').value='day';
      }
      else {
-       target.style.backgroundColor='white';
-       target.style.color='black'
-       this.value='night' 
+       document.querySelector('body').style.backgroundColor='white';
+       document.querySelector('body').style.color='black'
+       document.querySelector('#night_day').value='night' 
      }                                           
     ">
     <div id="grid">
@@ -42,16 +51,19 @@
 
         </div>
     </div>
-    <input type="button" value="night" onclick=" 
-    if(this.value==='night'){ 
-       document.querySelector('body').style.backgroundColor='black';
+    <!-- 스크롤 하기 위해 밑에다가 같은 버튼을 추가했다. 하지만 밑에 버튼을 누르면 color는 변화하지만 아래 버튼의 value값은 변하지 않는다. 하지만 위 버튼의 value값은 변한다. 이것은 우리가 원하지 않는 것이다. 따라서 id값을 구분을 해줘야 한다.
+    id값을 구분하기 위해 night_day2라고 설정하면, 모든 코드를 다 바꿔야 한다. 이러한 불편함을 줄이기 위해 onclick으로 실행되는 onclick과 같은 이벤트 안에서 실행되는 코드에서는 이 코드가 속해있는 태그를 가리키도록 약속된 코드가 존재한다. 자기자신을 가리키기위해 this를 사용한다.-->
+    <!--또한 document.querySelector('body')부분이 계속 반복이 된다. 이러한 중복을 제거하기 위해 target이라는 변수를 이용해 중복을 없앨 수 있다.-->
+    <input id="night_day" type="button" value="night" onclick=" 
+    if(document.querySelector('#night_day').value==='night'){                                             
+      document.querySelector('body').style.backgroundColor='black';
        document.querySelector('body').style.color='white';
-       this.value='day';
+       document.querySelector('#night_day').value='day';
      }
      else {
        document.querySelector('body').style.backgroundColor='white';
        document.querySelector('body').style.color='black'
-       this.value='night' 
+       document.querySelector('#night_day').value='night' 
      }                                           
     ">
 </body>
