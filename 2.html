@@ -8,6 +8,18 @@
 <!--id>class>일반선택자 순서로 강력하게 적용이 됨.-->    
     
 <body>
+    <input type="button" value="night" onclick=" 
+    if(this.value==='night'){ 
+       document.querySelector('body').style.backgroundColor='black';
+       document.querySelector('body').style.color='white';
+       this.value='day';
+     }
+     else {
+       document.querySelector('body').style.backgroundColor='white';
+       document.querySelector('body').style.color='black'
+       this.value='night' 
+     }                                           
+    ">
     <h1><a href="index.html">WEB</a></h1>
     <div id="grid">
         <ol >
@@ -23,5 +35,18 @@
             h1은 제목태그이기 때문에 자동으로 줄바꿈이 적용된다.</p>
         </div>
     </div>
+    
+    <input type="button" value="night" onclick=" 
+    if(this.value==='night'){ 
+       document.querySelector('body').style.backgroundColor='black';
+       document.querySelector('body').style.color='white';
+       this.value='day';
+     }
+     else {
+       document.querySelector('body').style.backgroundColor='white';
+       document.querySelector('body').style.color='black'
+       this.value='night' 
+     }                                           
+    ">
 </body>
 </html>
