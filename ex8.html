@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+</head>
+    
+    
+<body>
+    <h1>Loop & Array</h1>
+    <script>
+        var coworkers = ['egoing','leezche','duru','taeho'];
+    </script>
+    <h2>Co workers</h2>
+    <ul>
+        <script>
+            var i = 0;
+            while(i < coworkers.length ){
+                document.write('<li><a href="http://a.com/'+coworkers[i]+'">'+coworkers[i]+'</a></li>');
+                i = i+1;
+            }
+        </script>
+    </ul>
+    배열은 순서대로 연관된 데이터를 정리하는 역할을 하고, 반복문은 순서대로 배열에 담겨있는 데이터를 하나씩 꺼내서 자동화된 처리를 할 수 있는 문법이다.
+    이 두개는 환상의 콤비 역할을 한다.
+</body>
+</html>
