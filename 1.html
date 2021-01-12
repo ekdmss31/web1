@@ -6,23 +6,15 @@
     <title>WEB1 - html</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
+    <script src="color.js"></script><!--js를 파일로 쪼개서 적용시킴.-->
 </head>
     
     
 <body>
-    <input type="button" value="night" onclick=" 
-    if(this.value==='night'){ 
-       document.querySelector('body').style.backgroundColor='black';
-       document.querySelector('body').style.color='white';
-       this.value='day';
-     }
-     else {
-       document.querySelector('body').style.backgroundColor='white';
-       document.querySelector('body').style.color='black'
-       this.value='night' 
-     }                                           
-    ">
     <h1><a href="index.html">WEB</a></h1>
+    <input type="button" value="night" onclick=" 
+       nightDayHandler(this);                    
+    ">
      <div id="grid">
         <ol>
             <li><a href="1.html"> HTML</a></li>
@@ -38,19 +30,8 @@
         <img src="coding.jpg" width="500px">
            </div>
     </div>
-    
     <input type="button" value="night" onclick=" 
-    if(this.value==='night'){ 
-       document.querySelector('body').style.backgroundColor='black';
-       document.querySelector('body').style.color='white';
-       this.value='day';
-     }
-     else {
-       document.querySelector('body').style.backgroundColor='white';
-       document.querySelector('body').style.color='black'
-       this.value='night' 
-     }                                           
+       nightDayHandler(this);                    
     ">
-    
 </body>
 </html>

@@ -4,7 +4,39 @@
     <title>WEB1 - JavaScript</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
-    <script src="color.js"></script>
+    <script>
+    function LinksSetColor(color){
+      var alist = document.querySelectorAll('a');
+       var i = 0;                                         
+       while(i < alist.length){
+          alist[i].style.color = color;
+          i = i + 1 ;   
+       }   
+    }
+    function BodySetColor(color){
+        document.querySelector('body').style.color = color;
+    }
+    function BodySetBackgroundColor(color){
+        document.querySelector('body').style.backgroundColor = color;
+    }    
+    function nightDayHandler(self){  
+    var target = document.querySelector('body');                                            
+    if(self.value==='night'){ 
+       BodySetBackgroundColor('black');
+       BodySetColor('white');
+       self.value='day';
+
+       LinksSetColor('powderblue');              
+     }
+     else {
+       BodySetBackgroundColor('white');
+       BodySetColor('black');
+       self.value='night' ;
+
+       LinksSetColor('blue');   
+     } 
+    }   
+    </script>
 </head>
     
     
@@ -33,6 +65,7 @@
         <p>
         원래 사용했던 this는 웹브라우져를 가리킨다. 따라서 input을 가리키기 위해 매개변수를 이용한다. input에서 this를 이용해서 버튼을 가리키게 하면, this값이 function의 매개변수로 들어가서 함수를 실행시킨다.
         </p>
+        <p>BodySetBackgroundColor와 같이 너무 길어질 수 있기 때문에 이를 객체로 만들어서 Body.SetBackgroundColor로 변경할 수 있도록 할 것이다.(3)</p>
         </div>
     </div>
     <input type="button" value="night" onclick=" 
