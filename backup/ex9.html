@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+</head>
+    
+    
+<body>
+    <h1>Function</h1>
+    <h2>Basic</h2>
+    <ul>
+        <script>
+            function two() {
+                document.write('<li>2-1</li>');
+                document.write('<li>2-2</li>');
+            }
+            document.write('<li>1</li>');
+            two();
+            document.write('<li>3</li>');
+            two();
+        </script>
+    </ul>
+    
+    <h2>Parameter & Argument</h2>
+    여기서 함수로 전달하는 2와 3을 인자(Argument)라고 하고, a와 b를 파라미터(Parameter)라고 한다.<br>
+    <script>
+        function onPlusOne(){
+            document.write(1+1+'<br>');
+        }
+        onPlusOne();
+        
+        function sum(a,b){
+            document.write(a+b+'<br>');
+        }
+        function sumColorRed(a,b){
+            document.write('<div style="color:red">'+a+b+'</div><br>');
+        }
+        sum(2,3);
+        sumColorRed(2,3);
+        sum(3,4);
+        
+    </script>
+    
+    <h2>Return</h2>
+    함수는 입력(Parameter, Argument)과 출력(Return)으로 이루어졌다.<br>
+    <script>
+        function sum2(a,b){
+            return a+b;
+        }
+        document.write(sum2(2,3)+'<br>');
+        document.write('<div style="color:red">'+sum2(2,3)+'</div><br>');
+        document.write('<div style="font-size:3rem">'+sum2(2,3)+'</div><br>');
+    </script>
+</body>
+</html>
